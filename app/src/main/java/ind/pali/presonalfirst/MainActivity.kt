@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -55,25 +58,28 @@ fun Ayush()
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(0xFFF5E6C4)),
+            .background(color = Color(0xFF9DEBE3)),
+        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        Row{
-            Box (
-                modifier = Modifier
-                    .padding(16.dp)
-                    .background(color = Color.Black, shape = CircleShape)
-            ){
-                Text(text = "  Calculator  ", style = custom)
-            }
+    ) {
+        Box(
+            modifier = Modifier
+                .padding(16.dp)
+                .background(color = Color.Black, shape = CircleShape)
+        ) {
+            Text(text = "  Calculator  ", style = custom)
+        }
+        Spacer(modifier = Modifier.height(64.dp))
+        Button(onClick = { }) {
+            Text(text = " Play ")
         }
     }
 }
 
+
+
 @Preview(showBackground = true)
 @Composable
 fun AyushPreview() {
-    Column {
         Ayush()
-    }
 }
