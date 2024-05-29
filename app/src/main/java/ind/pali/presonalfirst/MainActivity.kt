@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ind.pali.presonalfirst.ui.theme.Ayush
 import ind.pali.presonalfirst.ui.theme.PresonalfirstTheme
+import ind.pali.presonalfirst.ui.theme.Second
 
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = Color(0xFFF5E6C4)
                 ) {
-
+                    Game()
                 }
             }
         }
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun game() {
+fun Game() {
     val navcontroller = rememberNavController()
     NavHost(navController = navcontroller, startDestination = "ayush"){
         composable("ayush") {
@@ -42,7 +43,9 @@ fun game() {
             }
         }
         composable("second"){
-
+            Second {
+                navcontroller.navigate("ayush")
+            }
         }
     }
 }
