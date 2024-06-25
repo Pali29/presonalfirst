@@ -11,9 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ind.pali.presonalfirst.ui.theme.Ayush
 import ind.pali.presonalfirst.ui.theme.PresonalfirstTheme
-import ind.pali.presonalfirst.ui.theme.Second
 
 
 class MainActivity : ComponentActivity() {

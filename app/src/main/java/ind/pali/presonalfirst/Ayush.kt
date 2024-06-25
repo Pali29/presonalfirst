@@ -1,4 +1,4 @@
-package ind.pali.presonalfirst.ui.theme
+package ind.pali.presonalfirst
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
